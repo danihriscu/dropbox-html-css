@@ -46,6 +46,15 @@ header a {
   padding: 10px 20px;
   margin-right: 20px;
 }
+.big-container {
+  width: 100%;
+}
+.small-container {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: 50px;
+}
 .header-bottom {
   margin: 0;
   background-color: #b4d0e7;
@@ -97,50 +106,41 @@ header a {
 
 /* MAIN  */
 
-.main-top {
-  height: 100vh;
-  background-color: white;
-  margin-top: 200px;
-}
-.main-top > .top-container {
+.big-container > .top-container {
   width: 1000px;
-  height: 100%;
+  padding: 200px 0 200px 0;
   margin: 0 auto;
   background-color: white;
 }
 
-.main-top > .top-container div h2 {
+.big-container > .top-container div h2 {
   font-size: 40px;
   padding-bottom: 50px;
 }
-.main-top > .top-container div button {
-  padding: 10px;
-  margin-right: 30px;
+.big-container > .top-container div label {
+  padding: 30px;
 }
 
 /* Card Main */
 
-.main-top .mid-container {
-  width: 1000px;
-  max-width: 100%;
-  display: flex;
-  gap: 70px;
-}
-.main-top .mid-container > .flex-card {
-  width: 100%;
-  max-height: 100vh;
+.big-container .small-container > .flex-card-b {
   border: 1px solid #767676;
   margin-top: 20px;
+  width: 33.33%;
+}
+.big-container .small-container > .flex-card {
+  padding-top: 40px;
+  width: 33.33%;
 }
 
-.main-top .mid-container .card {
+.big-container .small-container .card {
   display: flex;
   flex-direction: column;
   padding: 0px 25px 0px 25px;
   line-height: 22px;
 }
 .utente {
-  height: 30px;
+  padding: 15px;
   width: 100%;
   display: flex;
   border-bottom: 1px solid #767676;
@@ -150,18 +150,18 @@ header a {
 small {
   color: #767676;
 }
-.main-top .mid-container .card h3 {
+.big-container .small-container .card h3 {
   padding: 30px 0 20px 0;
   font-size: 25px;
   font-weight: 700;
 }
-.main-top .mid-container .card p {
+.big-container .small-container .card p {
   padding-bottom: 2px;
 }
-.main-top .mid-container .card div {
+.big-container .small-container .card div {
   padding-top: 40px;
 }
-.main-top .mid-container .card button {
+.big-container .small-container .card button {
   background-color: #0061ff;
   color: white;
   width: auto;
@@ -172,10 +172,10 @@ small {
   width: 100%;
   margin: 30px 0 30px 0;
 }
-.main-top .mid-container .card a {
+.big-container .small-container .card a {
   color: blue;
 }
-.main-top .mid-container .card hr {
+.big-container .small-container .card hr {
   border: 0.2px solid #dedee0;
   width: 50px;
   margin: 30px 0 30px 0;
@@ -183,51 +183,93 @@ small {
 /* .main-top .mid-container .card > h4 {
   margin-bottom: 10px;
 } */
-.main-top .mid-container .card div p {
+.big-container .small-container .card div p {
   margin-bottom: 15px;
 }
-/* Main Mid */
+/* Card bottom */
 
-.main-mid {
-  margin-top: 150px;
-  height: 400px;
+.card-bottom {
+  margin-top: 50px;
   width: 100%;
-  background-color: white;
 }
-.main-mid .mid-container {
+.card-bottom .user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #767676;
+  border-bottom: none;
+}
+.card-bottom .bottom-card {
   width: 1000px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   border: 1px solid #767676;
+  gap: 50px;
 }
 
-.main-mid .mid-container .description {
-  width: 66%;
+.card-bottom .bottom-card .description {
+  width: 66.66%;
   padding: 0px 0px 0px 25px;
 }
-.main-mid .mid-container .description h3 {
-  margin-top: 45px;
+.card-bottom .bottom-card .description h3 {
+  padding: 30px 0 20px 0;
   font-size: 25px;
   font-weight: 700;
 }
-.main-mid .mid-container .description h5 {
-  font-size: 15px;
-  max-width: 45%;
-  padding: 40px 0 40px 0;
+.card-bottom .bottom-card .description h5 {
+  font-size: 14px;
+  max-width: 40%;
 }
-.main-mid .mid-container .description p {
+.card-bottom .bottom-card .description p {
+  padding: 50px 0 50px 0;
   max-width: 100%;
-  font-size: 15px;
 }
-.main-mid .mid-container div > button {
+.card-bottom .bottom-card div {
+  width: 33.33%;
+  padding: 0 25px 0 25px;
+}
+.card-bottom .bottom-card div > button {
   background-color: #0061ff;
   color: white;
-  width: 90%;
-  padding: 17px;
+  width: 100%;
+  padding: 15px;
   font-size: medium;
   text-align: center;
   border: none;
   margin-top: 30px;
   margin-right: 30px;
+}
+
+/* Partner */
+.small-container .image-mid-container {
+  width: 66.66%;
+}
+.small-container .image-mid-container > img {
+  width: 100%;
+}
+.small-container .description {
+  width: 33.33%;
+  line-height: 22px;
+}
+.small-container .description > h3 {
+  padding: 60px 0 20px 0;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 35px;
+}
+.small-container .description > p {
+  width: 90%;
+  line-height: 25px;
+}
+.small-container .description > button {
+  color: black;
+  background-color: white;
+  border: 1px solid #767676;
+  padding: 14px 25px;
+}
+.small-container > h2 {
+  font-size: 2.5rem;
 }
