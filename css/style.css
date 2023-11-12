@@ -395,3 +395,30 @@ small {
 .question-container .question i {
   padding-right: 50px;
 }
+footer .container {
+  width: 100vw;
+  padding: 150px;
+  background-color: black;
+}
+footer .container .header-container {
+  width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  color: white;
+}
+footer .container .header-container .footer-description h4 {
+  padding-bottom: 20px;
+}
+footer .container .header-container .footer-description p {
+  padding-top: 12px;
+}
+footer .container .language {
+  padding-top: 150px;
+  width: 1200px;
+  margin: 0 auto;
+  color: white;
+}
+footer .container .language hr {
+  width: 10%;
+  margin-bottom: 30px;
+}
